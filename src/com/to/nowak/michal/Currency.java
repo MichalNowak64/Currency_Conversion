@@ -10,6 +10,18 @@ public class Currency {
         return multipler;
     }
 
+    public String getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getRate() {
+        return rate;
+    }
+
     public void setMultipler(int multipler) {
         this.multipler = multipler;
     }
