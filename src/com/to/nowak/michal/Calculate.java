@@ -5,5 +5,6 @@ import java.util.List;
 public class Calculate {
     private List<String> lista = new ArrayList<String>();
     public double count(double rate,int multipler,double amount){
-        return rate*amount/multipler;};
+        return rate*amount/multipler;}
+
 }
