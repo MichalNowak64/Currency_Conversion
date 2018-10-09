@@ -13,4 +13,11 @@ public class Currency {
     public void setMultipler(int multipler) {
         this.multipler = multipler;
     }
+
+    public Currency(String code, String name, int multipler, double rate) {
+        this.code = code;
+        this.name = name;
+        this.multipler = multipler;
+        this.rate = rate;
+    }
 }
