@@ -8,7 +8,8 @@ public class Main {
         System.out.println( licz.count(euro.getRate(),euro.getMultipler(),100));
 
         XML_Provider test=new XML_Provider();
-        test.get_data();
+        Curr_list listatest=new Curr_list(test.get_data());
+        listatest.print_curr_list();
 
 	// write your code here
     }
