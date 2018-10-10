@@ -1,5 +1,7 @@
 package com.to.nowak.michal;
 
+import java.util.List;
+
 public interface Provider {
-public void get_data();
+public List<Currency> get_data();
 }

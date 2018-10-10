@@ -26,7 +26,7 @@ public class Currency {
         this.multipler = multipler;
     }
 
-    public Currency(String code, String name, int multipler, double rate) {
+    public Currency(String name,int multipler, String code, double rate) {
         this.code = code;
         this.name = name;
         this.multipler = multipler;
