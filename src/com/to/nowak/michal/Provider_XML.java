@@ -11,7 +11,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XML_Provider implements Provider{
+public class Provider_XML implements Provider{
 
     @Override
     public List<Currency> get_data() {

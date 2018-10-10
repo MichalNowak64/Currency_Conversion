@@ -3,13 +3,12 @@ package com.to.nowak.michal;
 public class Main {
 
     public static void main(String[] args) {
-        Currency euro=new Currency("euro",1,"EUR",4.391);
-        Calculate licz=new Calculate();
-        System.out.println( licz.count(euro.getRate(),euro.getMultipler(),100));
 
-        XML_Provider test=new XML_Provider();
+        Provider_XML test=new Provider_XML();
         Curr_list listatest=new Curr_list(test.get_data());
-        listatest.print_curr_list();
+
+        Calculate przelicz=new Calculate();
+        System.out.println(przelicz.count(listatest.getLista().get(1).getRate(),listatest.getLista().get(1).getMultipler(),100));
 
 	// write your code here
     }

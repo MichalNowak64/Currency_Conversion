@@ -13,6 +13,10 @@ public class Curr_list {
         return by_name;
     }
 
+    public List<Currency> getLista() {
+        return lista;
+    }
+
     public Curr_list(List<Currency> lista) {
         this.lista = lista;
     }
