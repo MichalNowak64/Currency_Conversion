@@ -11,7 +11,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XML_Provider implements Provider{
+public class Provider_XML implements Provider{
 
     @Override
     public List<Currency> get_data() {
@@ -26,11 +26,11 @@ public class XML_Provider implements Provider{
             //read this - http://stackoverflow.com/questions/13786607/normalization-in-dom-parsing-with-java-how-does-it-work
             doc.getDocumentElement().normalize();
 
-            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
+            //System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
 
             NodeList nList = doc.getElementsByTagName("pozycja");
 
-            System.out.println("----------------------------");
+            //System.out.println("----------------------------");
 
 
 
@@ -46,14 +46,6 @@ public class XML_Provider implements Provider{
                                     eElement.getElementsByTagName("kod_waluty").item(0).getTextContent(),
                                     Double.parseDouble(eElement.getElementsByTagName("kurs_sredni").item(0).getTextContent().replaceAll(",","."))));
                 }
-            }
-
-            for(int i=0;i<lista.size();i++){
-                System.out.println("\n");
-                System.out.println("nazwa_waluty : " + lista.get(i).getName());
-                System.out.println("przelicznik : " + lista.get(i).getMultipler());
-                System.out.println("kod_waluty : " + lista.get(i).getCode());
-                System.out.println("kurs_sredni : " + lista.get(i).getRate());
             }
 
         } catch (Exception e) {
