@@ -20,14 +20,4 @@ public class Curr_list {
     public Curr_list(List<Currency> lista) {
         this.lista = lista;
     }
-
-    public void print_curr_list(){
-        for(int i=0;i<lista.size();i++){
-            System.out.println("\n");
-            System.out.println("nazwa_waluty : " + lista.get(i).getName());
-            System.out.println("przelicznik : " + lista.get(i).getMultipler());
-            System.out.println("kod_waluty : " + lista.get(i).getCode());
-            System.out.println("kurs_sredni : " + lista.get(i).getRate());
-        }
-    }
 }

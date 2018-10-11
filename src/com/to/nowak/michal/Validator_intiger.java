@@ -1,3 +1,4 @@
+//NIE ZROBIONE !!!
 package com.to.nowak.michal;
 
 public class Validator_intiger implements Validator {
