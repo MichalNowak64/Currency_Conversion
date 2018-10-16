@@ -1,5 +1,5 @@
 package com.to.nowak.michal;
 
 public interface Validator {
-    public boolean check_data();
+    boolean validateInput(String input);
 }

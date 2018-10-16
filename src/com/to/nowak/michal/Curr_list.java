@@ -3,21 +3,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Curr_list {
-    private  List<Currency> lista = new ArrayList<Currency>();
+    private  List<Currency> currencyList = new ArrayList<Currency>();
 
-    public List<String> get_curr_list_by_name() {
-        List<String> by_name=new ArrayList<String>();
-        for(int i=0;i<lista.size();i++){
-            by_name.add(lista.get(i).getName());
+    public Currency getCurrencyByName(String name) {
+        for (Currency el : currencyList) {
+            if (el.getName().equals(name)) {
+                return el;
+            }
         }
-        return by_name;
+        return null;
     }
 
     public List<Currency> getLista() {
-        return lista;
+        return currencyList;
     }
 
     public Curr_list(List<Currency> lista) {
-        this.lista = lista;
+        this.currencyList = lista;
     }
 }
