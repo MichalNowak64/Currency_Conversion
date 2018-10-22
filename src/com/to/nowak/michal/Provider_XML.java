@@ -16,6 +16,11 @@ public class Provider_XML implements Provider{
     @Override
     public List<Currency> get_data() {
         List <Currency> lista= new ArrayList<Currency>();
+
+        //Dodanie do listy walit PLN na samym jej początku
+        Currency pln=new Currency("Polski Nowy Złoty",1,"PLN",1);
+        lista.add(pln);
+
         try {
 
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
