@@ -1,10 +1,15 @@
 package com.to.nowak.michal;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Calculate {
-    private List<String> lista = new ArrayList<String>();
-    public double count(double rate,int multipler,double amount){
-        return rate*amount/multipler;}
+    private CurrencyList currencyList;
+
+    public Calculate( CurrencyList currencyList) {
+        this.currencyList = currencyList;
+    }
+    public double count(double amount,int left,int right){
+        Currency leftCurrency=currencyList.getCurrencyList().get(left);
+        Currency rightCurrency=currencyList.getCurrencyList().get(right);
+        double wynik = amount * (rightCurrency.getMultipler() / rightCurrency.getRate()) / (leftCurrency.getMultipler() / leftCurrency.getRate());
+        return wynik;}
 
 }
