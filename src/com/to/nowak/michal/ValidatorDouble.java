@@ -1,12 +1,11 @@
-//NIE ZROBIONE !!!
 package com.to.nowak.michal;
 
-public class Validator_intiger implements Validator {
+public class ValidatorDouble implements Validator {
     @Override
     public boolean check_data(Object input){
-        int i;
+        double i;
         try{
-            i=(Integer) input;
+            i=(Double) input;
         }
         catch (Exception e)
         {

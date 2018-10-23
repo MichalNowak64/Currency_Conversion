@@ -10,7 +10,7 @@ public class Main {
         CurrencyList list_of_curr=new CurrencyList(test.get_data());
         Calculate przelicz=new Calculate(list_of_curr);
         Scanner odczyt = new Scanner(System.in);
-        Validator validator = new Validator_intiger();
+        Validator validator = new ValidatorIntiger();
 
 
 
@@ -20,17 +20,22 @@ public class Main {
         int left,right;
         double amount,value;
 
-        System.out.print("Wybierz walute: ");
-        left=odczyt.nextInt();
-        if(!validator.check_data(left)) return;
+        do {
+            System.out.print("Wybierz walute: ");
+            left = odczyt.nextInt();
+        }while (!validator.check_data(left));
+
 
         System.out.print("Ilosc waluty: ");
         amount=odczyt.nextDouble();
 
         view.print_curr_by_name(list_of_curr.getCurrencyList());
 
-        System.out.print("Wybierz walute: ");
-        right=odczyt.nextInt();
+        do {
+            System.out.print("Wybierz walute: ");
+            right = odczyt.nextInt();
+        }while (!validator.check_data(right));
+
 
         value=przelicz.count(amount,left,right);
 
